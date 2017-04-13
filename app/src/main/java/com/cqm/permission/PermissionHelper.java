@@ -100,6 +100,9 @@ public class PermissionHelper {
             }
         } else {
             Log.v(TAG, "不是6.0系统");
+             if (mOnPermissionListener != null) {
+                mOnPermissionListener.onAfterApplyAllPermission(mPmodel, true);
+            }
         }
     }
 
